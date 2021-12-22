@@ -4,6 +4,7 @@ IP_ADDRESS=$(ifconfig | grep -E 'inet.[0-9]' | grep -v '127.0.0.1' | awk '{ prin
 fetch https://github.com/Thefrank/freebsd-port-sooners/releases/download/20211015/prowlarrdotnet-0.1.1.978.pkg
 
 pkg install -y prowlarrdotnet-0.1.1.978.pkg
+rm prowlarrdotnet-0.1.1.978.pkg
 
 sysrc prowlarrdotnet_enable=TRUE
 
